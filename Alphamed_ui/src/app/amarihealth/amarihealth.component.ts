@@ -21,7 +21,7 @@ export class AmarihealthComponent implements OnInit {
   }
 
   amarihealthsaveform = new FormGroup({
-    worked_date: new FormControl('', [Validators.required]),
+    worked_date: new FormControl(''),
     dos: new FormControl('', [Validators.required]),
     encounter_number: new FormControl('', [Validators.required]),
     no_of_insurance_available: new FormControl('', [Validators.required]),
@@ -38,7 +38,7 @@ export class AmarihealthComponent implements OnInit {
     ded: new FormControl('', [Validators.required]),
     oop: new FormControl('', [Validators.required]),
     coinsurance: new FormControl('', [Validators.required]),
-    type: new FormControl('', [Validators.required]),
+    type: new FormControl('', [Validators.required])
   });
 
   saveAmariHealth(varAmariHealth) {
