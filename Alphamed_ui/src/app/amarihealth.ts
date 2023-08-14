@@ -7,4 +7,8 @@ export class Amarihealth {
   payer: String;
   status: String;
   outputData: String;
+  intials: String;
+  others: String;
+  websiteOrCall: String;
+  PatientName: String;
 }
