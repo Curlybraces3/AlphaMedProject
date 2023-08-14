@@ -1,0 +1,105 @@
+.page {
+  color: white;
+  padding: 0 1rem;
+  background: #f1f5f9;
+  &__box {
+    min-height: 120px;
+    background: #1e293b;
+    margin: 0 -1rem;
+    font-size: 36px;
+  }
+  &__content {
+    border-radius: 10px;
+    margin-top: -2rem;
+    background: white;
+    color: black;
+
+  }
+  .mat-datepicker-toggle{
+    margin-left: 8rem;
+  }
+  mat-form-field {
+  margin-right: 100px;
+  }
+  .workdatediv{
+    margin-left:-1000px;
+    margin-top:0px;
+  }
+  .dosdiv{
+    margin-left:-500px;
+    margin-top:-63px
+  }
+  .encoundiv{
+      margin-left:190px;
+      margin-top:-38px;
+  }
+  .insuavaidiv{
+      margin-left:870px;
+      margin-top:-55px
+  }
+  .insuveridiv{
+      margin-left:-850px;
+      margin-top:30px;
+  }
+  .payerdiv{
+      margin-left:-360px;
+      margin-top:-75px;
+  }
+  .statusdiv{
+      margin-left:190px;
+      margin-top:-57px;
+  }
+  .presdcdiv{
+      margin-left:870px;
+      margin-top:-57px;
+  }
+  .subplandiv{
+      margin-left:-850px;
+      margin-top:30px;
+  }
+  .parcobdiv{
+      margin-left:-360px;
+      margin-top:-55px;
+  }
+  .authdiv{
+      margin-left:190px;
+      margin-top:-56px;
+  }
+  .perdiv{
+      margin-left:870px;
+      margin-top:-57px;
+  }
+  .schedulediv{
+      margin-left:-850px;
+      margin-top:30px;
+  }
+  .copaydiv{
+       margin-left:-360px;
+       margin-top:-55px;
+  }
+  .deddiv{
+      margin-left:190px;
+      margin-top:-56px;
+  }
+  .oopdiv{
+      margin-left:870px;
+      margin-top:-57px;
+  }
+  .coinsurdiv{
+      margin-left:-850px;
+      margin-top:20px;
+  }
+  .typediv{
+      margin-left:-360px;
+      margin-top:-57px;
+  }
+  .generateButton{
+      margin-left:-1200px;
+      margin-top:-50px;
+  }
+  .generatedoutput{
+      margin-left:-850px;
+      margin-top:50px;
+      size:1000px;
+  }
+}

@@ -12,6 +12,6 @@ export class AmarihealthService {
   }
 
   saveAmariHealth(varAmarihealth: object): Observable<object> {
-    return this.http.post('http://localhost:8080/amarihealth/api', varAmarihealth);
+    return this.http.post('http://localhost:8080/amarihealth', varAmarihealth);
   }
 }

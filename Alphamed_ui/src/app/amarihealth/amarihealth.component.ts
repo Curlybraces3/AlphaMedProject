@@ -12,6 +12,7 @@ export class AmarihealthComponent implements OnInit {
   date = new Date();
   serializedDate = new Date();
   submitted = false;
+  outputData='';
 
   varAmariHealth: Amarihealth = new Amarihealth();
 
@@ -38,7 +39,8 @@ export class AmarihealthComponent implements OnInit {
     ded: new FormControl('', [Validators.required]),
     oop: new FormControl('', [Validators.required]),
     coinsurance: new FormControl('', [Validators.required]),
-    type: new FormControl('', [Validators.required])
+    type: new FormControl('', [Validators.required]),
+    outputData: new FormControl(''),
   });
 
   saveAmariHealth(varAmariHealth) {
@@ -50,7 +52,7 @@ export class AmarihealthComponent implements OnInit {
     this.varAmariHealth.no_of_insurance_verified = this.InsuranceVerified.value;
     this.varAmariHealth.payer = this.Payer.value;
     this.varAmariHealth.status = this.Status.value;
-    this.varAmariHealth.comments =
+    this.varAmariHealth.outputData =
       this.PreSdc.value +
       ' ' +
       this.SubSelf.value +
@@ -79,8 +81,29 @@ export class AmarihealthComponent implements OnInit {
     this.clearFields();
   }
 
+  generateOutput(){
+
+  }
+
   clearFields() {
-    this.Coinsurance.setValue(null);
+//   this.worked_date.setValue(null);
+//   this.dos.setValue(null);
+//   this.encounter_number.setValue(null);
+//   this.no_of_insurance_available.setValue(null);
+//   this.no_of_insurance_verified.setValue(null);
+//   this.payer.setValue(null);
+//   this.status.setValue(null);
+//   this.pre_sdc.setValue(null);
+//   this.sub_self.setValue(null);
+//   this.par_cob.setValue(null);
+//   this.auth_no.setValue(null);
+//   this.per.setValue(null);
+//   this.schedule_phone.setValue(null);
+//   this.copay.setValue(null);
+//   this.ded.setValue(null);
+//   this.oop.setValue(null);
+//   this.coinsurance.setValue(null);
+//   this.type.setValue(null);
   }
 
   save() {
@@ -161,4 +184,10 @@ export class AmarihealthComponent implements OnInit {
   get Type() {
     return this.amarihealthsaveform.get('type');
   }
+
+  get Output(){
+    return this.amarihealthsaveform.get('outputData');
+  }
+
+  set
 }

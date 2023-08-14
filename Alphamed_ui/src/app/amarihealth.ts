@@ -6,5 +6,5 @@ export class Amarihealth {
   no_of_insurance_verified: number;
   payer: String;
   status: String;
-  comments: String;
+  outputData: String;
 }

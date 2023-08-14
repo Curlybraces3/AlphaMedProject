@@ -3,131 +3,147 @@
     <div class="page__content shadow p-3 position-relative" style="min-height:calc(100vh - 10px)">
         <div class="page__content-data position-absolute text-center">
             <form [formGroup]="amarihealthsaveform" (ngSubmit)="saveAmariHealth(varAmariHealth)">
-
-                <mat-form-field>
-                    <mat-label>Worked Date</mat-label>
-                    <input matInput [matDatepicker]="picker1" [formControl]="date" formControlName="worked_date">
-                    <mat-hint>MM/DD/YYYY</mat-hint>
-                    <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
-                    <mat-datepicker #picker1></mat-datepicker>
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>DOS</mat-label>
-                    <input matInput [matDatepicker]="picker2" [formControl]="serializedDate" formControlName="dos">
-                    <mat-hint>MM/DD/YYYY</mat-hint>
-                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
-                    <mat-datepicker #picker2></mat-datepicker>
-                </mat-form-field>
-                <div style="margin-left: 100%; margin-top: -10%;">
-                    <mat-form-field class="example-full-width1">
-                        <mat-label>Encounter Number</mat-label>
-                        <input matInput placeholder="Eg: PSH02005997246" formControlName="encounter_number">
-                    </mat-form-field>
+                <div class="workdatediv">
+                  <label style="margin-left: -40px;">
+                    Worked Date:
+                  </label>
+                  <br/><br/> <input type="date" name="worked-date" formControlName="worked_date" />
                 </div>
-                <mat-form-field class="example-full-width" style=" margin-top: 5%;">
+
+                <div class="dosdiv">
+                  <label style="margin-left:-100px">
+                    DOS:
+                  </label>
+                  <br/><br/> <input type="date" name="dos" formControlName="dos" />
+                </div>
+
+
+                <div class="encoundiv">
+                  <mat-form-field>
+                    <mat-label>Encounter Number</mat-label>
+                    <input matInput placeholder="Eg: PSH02005997246" formControlName="encounter_number">
+                  </mat-form-field>
+                </div>
+
+                <div class="insuavaidiv">
+                  <mat-form-field>
                     <mat-label>No of Insurance Available</mat-label>
                     <input matInput placeholder="Eg: 1" formControlName="no_of_insurance_available">
                     <!--placeholder="Ex. Pizza" value="Sushi"-->
-                </mat-form-field>
-                <mat-form-field class="example-full-width">
+                  </mat-form-field>
+                </div>
+
+                <div class="insuveridiv">
+                  <mat-form-field>
                     <mat-label>No of insurance verified</mat-label>
                     <input matInput placeholder="Eg: 1" formControlName="no_of_insurance_verified">
                     <!--placeholder="Ex. Pizza" value="Sushi"-->
-                </mat-form-field><br/>
-                <div style="margin-left: 100%; margin-top: -10%;">
-                    <mat-form-field class="example-full-width" style="margin-left: 100%; ">
-                        <mat-label>Payer</mat-label>
-                        <input matInput placeholder="Eg: CBC" formControlName="payer">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: -50%; margin-top: -20px;">
-                    <mat-form-field class="example-full-width" style=" margin-top: 5%;">
-                        <mat-label>Status</mat-label>
-                        <input matInput placeholder="Eg: Active/Inactive" formControlName="status">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <br/>
+                <div class="payerdiv">
+                  <mat-form-field>
+                    <mat-label>Payer</mat-label>
+                    <input matInput placeholder="Eg: CBC" formControlName="payer">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: 50%; margin-top: -56px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Pre-SDC/Contact </mat-label>
-                        <input matInput placeholder="Eg: PLAN/SITE " formControlName="pre_sdc">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="statusdiv">
+                  <mat-form-field>
+                    <mat-label>Status</mat-label>
+                    <input matInput placeholder="Eg: Active/Inactive" formControlName="status">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: 100%; margin-top: -56px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Sub self/Plan type </mat-label>
-                        <input matInput placeholder="Eg: MA HMO " formControlName="sub_self">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="presdcdiv">
+                  <mat-form-field>
+                    <mat-label>Pre-SDC/Contact </mat-label>
+                    <input matInput placeholder="Eg: PLAN/SITE " formControlName="pre_sdc">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: -50% ;margin-top: 20px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>PAR/COB order </mat-label>
-                        <input matInput placeholder="Eg: PRIMARY" formControlName="par_cob">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="subplandiv">
+                  <mat-form-field>
+                    <mat-label>Sub self/Plan type </mat-label>
+                    <input matInput placeholder="Eg: MA HMO " formControlName="sub_self">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: 50%; margin-top: -55px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>AUTH No </mat-label>
-                        <input matInput placeholder="Eg: CPT " formControlName="auth_no">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="parcobdiv">
+                  <mat-form-field>
+                    <mat-label>PAR/COB order </mat-label>
+                    <input matInput placeholder="Eg: PRIMARY" formControlName="par_cob">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: 100%; margin-top: -55px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>PER</mat-label>
-                        <input matInput placeholder="Eg: PLAN " formControlName="per">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="authdiv">
+                  <mat-form-field>
+                    <mat-label>AUTH No </mat-label>
+                    <input matInput placeholder="Eg: CPT " formControlName="auth_no">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: -50%; margin-top: 10px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>schedule/phone </mat-label>
-                        <input matInput formControlName="schedule_phone">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="perdiv">
+                  <mat-form-field>
+                    <mat-label>PER</mat-label>
+                    <input matInput placeholder="Eg: PLAN " formControlName="per">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: 50%; margin-top: -55px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>copay</mat-label>
-                        <input matInput formControlName="copay">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="schedulediv">
+                  <mat-form-field>
+                    <mat-label>schedule/phone </mat-label>
+                    <input matInput formControlName="schedule_phone">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: 100%; margin-top: -55px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>ded</mat-label>
-                        <input matInput formControlName="ded">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="copaydiv">
+                  <mat-form-field>
+                    <mat-label>copay</mat-label>
+                    <input matInput formControlName="copay">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: -50%; margin-top: 10px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>oop</mat-label>
-                        <input matInput formControlName="oop">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="deddiv">
+                  <mat-form-field>
+                    <mat-label>ded</mat-label>
+                    <input matInput formControlName="ded">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: 50%; margin-top: -55px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>coinsurance</mat-label>
-                        <input matInput formControlName="coinsurance">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="oopdiv">
+                  <mat-form-field>
+                    <mat-label>oop</mat-label>
+                    <input matInput formControlName="oop">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <div style="margin-left: 100%; margin-top: -55px; ">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>type</mat-label>
-                        <input matInput formControlName="type">
-                        <!--placeholder="Ex. Pizza" value="Sushi"-->
-                    </mat-form-field>
+                <div class="coinsurdiv">
+                  <mat-form-field>
+                    <mat-label>coinsurance</mat-label>
+                    <input matInput formControlName="coinsurance">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
                 </div>
-                <section>
-                    <button type="submit" mat-raised-button color="accent" style="margin-left: 50%;background-color: #2c3344; color: white;">Create</button>
-                </section>
+                <div class="typediv">
+                  <mat-form-field>
+                    <mat-label>type</mat-label>
+                    <input matInput formControlName="outputData">
+                    <!--placeholder="Ex. Pizza" value="Sushi"-->
+                  </mat-form-field>
+                </div>
+                <div class="generateButton">
+                  <section>
+                    <button type="submit" mat-raised-button color="accent" style=" margin-left: 50%;background-color: #2c3344; color: white;">Generate Output</button>
+                  </section>
+                </div>
+                <div class="generatedoutput">
+                  <mat-form-field appearance="outline" >
+                    <mat-label>Data</mat-label>
+                    <textarea matInput formControlName="outputData"></textarea>
+                  </mat-form-field>
+                </div>
+
 
             </form>
         </div>
